@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Semana11A2023.Views.Operacions">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+    <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Entry Grid.Row="0" Grid.Column="0" Placeholder="Valor A" Text="{Binding ValorA}" />
+        <Entry Grid.Row="1" Grid.Column="0" Placeholder="Valor B" Text="{Binding ValorB}" />
+
+        <Button Grid.Row="0" Grid.Column="1" Text="Sumar" Command="{Binding Sumar}" CornerRadius="40" BackgroundColor="DodgerBlue" Margin="40" TextColor="White" />
+        <Button Grid.Row="1" Grid.Column="1" Text="Restar" Command="{Binding Restar}" CornerRadius="40" BackgroundColor="DodgerBlue" Margin="40" TextColor="White" />
+        <Button Grid.Row="2" Grid.Column="1" Text="Multiplicar" Command="{Binding Multiplicar}" CornerRadius="40" BackgroundColor="DodgerBlue" Margin="40" TextColor="White" />
+        <Button Grid.Row="3" Grid.Column="1" Text="Dividir" Command="{Binding Division}" CornerRadius="40" BackgroundColor="DodgerBlue" Margin="40" TextColor="White" />
+           
+            <Label Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="Center" FontSize="Large" Text="{Binding Resultado}" />
+    </Grid>
+</StackLayout>
+
+
+</ContentPage>
